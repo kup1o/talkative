@@ -1,0 +1,15 @@
+[Unit] 
+Description=Telegram Bot
+Wants=network.target 
+
+[Service] 
+WorkingDirectory=/path/to/folder
+User=user
+ExecStart=/usr/bin/python3 /pass/to/bot.py 
+ExecReload=/usr/bin/python3 /pass/to/bot.py
+RestartSec=15
+Restart=always
+RuntimeMaxSec=43200
+ 
+[Install]
+WantedBy=multi-user.target
